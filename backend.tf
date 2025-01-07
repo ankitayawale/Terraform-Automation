@@ -3,6 +3,6 @@ terraform {
     bucket = "barclays-bucket"
     key = "jenkins-server"
     region = "us-east-1"
-    dynamodb_table = "my-dynamodb"
+    dynamodb_table = "my-dynabodb"
   }
 }

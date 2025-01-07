@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+      stages {
+        stage('Cloning github repo') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ankitayawale/Terraform-Automation.git']])
+            }
+        }
+
     stages {
         stage ("terraform init") {
             steps {
